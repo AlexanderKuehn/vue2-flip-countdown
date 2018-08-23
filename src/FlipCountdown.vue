@@ -99,6 +99,7 @@ export default {
       if (this.diff < 0 || this.stop) {
         this.diff = 0
         clearInterval(interval)
+        this.$emit('stopped')
       } else {
         this.updateTime(0, this.days)
         this.updateTime(1, this.hours)
