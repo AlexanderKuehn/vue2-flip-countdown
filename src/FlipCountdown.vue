@@ -96,7 +96,7 @@ export default {
   watch: {
     now (value) {
       this.diff = this.date - this.now
-      if (this.diff <= 0 || this.stop) {
+      if (this.diff < 0 || this.stop) {
         this.diff = 0
         clearInterval(interval)
       } else {
